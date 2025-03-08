@@ -7,12 +7,12 @@
 **1. Go to the Physical Path and Set the Current Working Directory**
 Navigate to C:\KCSWorks\DevOps:
 
- cd C:\KCSWorks\DevOps
+     cd C:\KCSWorks\DevOps
 
 **2. Clone the Git Repository Using HTTP URL**
 
 Clone the repository from GitHub:
-  git clone https://github.com/NAVIN132/DEVOPSLAB.git
+     git clone https://github.com/NAVIN132/DEVOPSLAB.git
  
 This will create a DEVOPSLAB directory, and inside it, there will be a .git folder that tracks the repository.
 
@@ -20,8 +20,8 @@ This will create a DEVOPSLAB directory, and inside it, there will be a .git fold
 
 Change the directory to the DEVOPSLAB folder and check the status of the main branch:
 
- cd DEVOPSLAB
- git status
+    cd DEVOPSLAB
+    git status
 
 **4. Check the Git Log to Ensure All Objects are Received**
 
@@ -37,16 +37,16 @@ git log
    
 Switch from the main branch to the feature1 branch:
 
-git checkout feature1
+    git checkout feature1
 Alternatively, you can create and switch to the new branch in one command:
 
-git checkout -b feature1
+    git checkout -b feature1
 
 **7. Create a New File (index.html) in the feature1 Branch**
 
 Create the index.html file in the feature1 branch:
 
-  touch index.html
+      touch index.html
 **8. Add the File to the Staging Area**
 
 Add the index.html file to the staging area:
@@ -62,26 +62,26 @@ git commit -m "add the index.html file"
 
 Check the log to verify the commit and status to see if there are any changes that need to be staged:
 
-git log
-git status
+    git log
+    git status
 
 **11. Pull the Latest Changes (If Any) from the Remote Repository**
 
 To ensure that your feature1 branch is up to date, pull the latest changes from the remote repository:
 
-git pull
+    git pull
 
 **12. Push the feature1 Branch to GitHub**
 
 Push your changes to the feature1 branch on GitHub:
 
-git push -u origin feature1
+    git push -u origin feature1
 
 **13. Check the Git Status Again**
 
 Verify the status to ensure everything is committed and pushed:
 
-git status
+    git status
 
 
 ******Assignment 2 ******
@@ -90,22 +90,22 @@ git status
 **1. Stash Your Uncommitted Changes**
 Before you revert the commit, you want to make sure your uncommitted changes are saved. This can be done using git stash. This temporarily stores your uncommitted changes so you can work on the bug fix without losing your progress.
 
-git stash
+    git stash
 This command will save your changes to a "stash" and revert your working directory to the state of the last commit.
 
 **2. Checkout to the Development Branch**
 Make sure you're on the correct branch (in this case, development) where the buggy commit was made.
 
 
-git checkout development
+    git checkout development
 **3. Revert the Buggy Commit**
 If you know the commit that introduced the bug, you can revert it using the commit hash. You can find the commit hash by running git log or using a tool like gitk:
 
-git log
+    git log
 
 Once you have the commit hash (let’s assume it’s abc1234), run the following command to revert the commit:
 
-git revert abc1234
+    git revert abc1234
 This command creates a new commit that undoes the changes from the problematic commit. If there are merge conflicts, you will need to resolve them manually.
 
 **4. Fix the Issue (If Needed)**
@@ -114,15 +114,15 @@ Once you've reverted the commit, you might want to manually fix any remaining is
 After making changes, you can add and commit these fixes:
 
 
-git add .
-git commit -m "Fixed issue caused by commit abc1234"
+    git add .
+    git commit -m "Fixed issue caused by commit abc1234"
 
 
 **5. Apply Your Stashed Changes (If Needed)**
 If you stashed changes earlier and want to bring them back into your working directory, use:
 
 
-git stash pop
+    git stash pop
 This will apply the changes you had stashed before. If there are any conflicts, Git will notify you, and you'll need to resolve them.
 
 **6. Tag the Repository to Mark the Release**
@@ -131,11 +131,11 @@ Once everything is fixed and you're happy with the state of the repository, you 
 To create a lightweight tag (not attached to a specific commit message):
 
 
-git tag v1.0.0
+    git tag v1.0.0
 Or, if you'd like to add a message to the tag:
 
 
-git tag -a v1.0.0 -m "Release version 1.0.0"
+    git tag -a v1.0.0 -m "Release version 1.0.0"
 This will create a tag with the version number v1.0.0 to mark the current commit.
 
 **7. Push the Reverted Commit and the Tag to Remote Repository**
@@ -144,14 +144,14 @@ Now, you need to push the changes (revert and fixes) along with the tag to the r
 To push the changes to the development branch:
 
 
-git push origin development
+    git push origin development
 To push the new tag to the remote repository:
 
-git push origin v1.0.0
+    git push origin v1.0.0
 If you stashed changes earlier and want to bring them back into your working directory, use:
 
 
-git stash pop
+    git stash pop
 This will apply the changes you had stashed before. If there are any conflicts, Git will notify you, and you'll need to resolve them.
 
 ******Assignment 3******
@@ -199,9 +199,9 @@ After merging the pull request on GitHub, you can update your local main branch 
 
 Switch to your main branch:
 
-git checkout main
+    git checkout main
 Pull the latest changes from GitHub:
 
-git pull origin main
+    git pull origin main
 
 
