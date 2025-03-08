@@ -7,12 +7,12 @@
 **1. Go to the Physical Path and Set the Current Working Directory**
 Navigate to C:\KCSWorks\DevOps:
 
-cd C:\KCSWorks\DevOps
+ cd C:\KCSWorks\DevOps
 
 **2. Clone the Git Repository Using HTTP URL**
 
 Clone the repository from GitHub:
- git clone https://github.com/NAVIN132/DEVOPSLAB.git
+  git clone https://github.com/NAVIN132/DEVOPSLAB.git
  
 This will create a DEVOPSLAB directory, and inside it, there will be a .git folder that tracks the repository.
 
@@ -20,8 +20,8 @@ This will create a DEVOPSLAB directory, and inside it, there will be a .git fold
 
 Change the directory to the DEVOPSLAB folder and check the status of the main branch:
 
-cd DEVOPSLAB
-git status
+ cd DEVOPSLAB
+ git status
 
 **4. Check the Git Log to Ensure All Objects are Received**
 
@@ -30,8 +30,8 @@ git log
 
 **5. Create a New Branch (feature1)**
 
-Create a new branch called feature1:
-git branch feature1
+  Create a new branch called feature1:
+  git branch feature1
 
 **6. Switch to the feature1 Branch**
    
@@ -46,7 +46,7 @@ git checkout -b feature1
 
 Create the index.html file in the feature1 branch:
 
-touch index.html
+  touch index.html
 **8. Add the File to the Staging Area**
 
 Add the index.html file to the staging area:
@@ -182,6 +182,7 @@ Create the pull request:
 
 After reviewing, click the Create pull request button.
 You can add a title and description for your PR. It's a good practice to add a meaningful description about what the PR is doing (e.g., "Add new feature to handle user authentication").
+
 **3. Merge the Pull Request**
 Once your PR is created, you may need someone to review the changes (depending on the repository's settings). After the review, you'll either:
 
