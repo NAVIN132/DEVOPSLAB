@@ -82,3 +82,78 @@ git push -u origin feature1
 Verify the status to ensure everything is committed and pushed:
 
 git status
+
+
+******Assignment 2 ******
+
+
+**1. Stash Your Uncommitted Changes**
+Before you revert the commit, you want to make sure your uncommitted changes are saved. This can be done using git stash. This temporarily stores your uncommitted changes so you can work on the bug fix without losing your progress.
+
+git stash
+This command will save your changes to a "stash" and revert your working directory to the state of the last commit.
+
+**2. Checkout to the Development Branch**
+Make sure you're on the correct branch (in this case, development) where the buggy commit was made.
+
+
+git checkout development
+**3. Revert the Buggy Commit**
+If you know the commit that introduced the bug, you can revert it using the commit hash. You can find the commit hash by running git log or using a tool like gitk:
+
+git log
+
+Once you have the commit hash (let’s assume it’s abc1234), run the following command to revert the commit:
+
+git revert abc1234
+This command creates a new commit that undoes the changes from the problematic commit. If there are merge conflicts, you will need to resolve them manually.
+
+**4. Fix the Issue (If Needed)**
+Once you've reverted the commit, you might want to manually fix any remaining issues that were introduced by that commit. Make any necessary code changes in your working directory.
+
+After making changes, you can add and commit these fixes:
+
+
+git add .
+git commit -m "Fixed issue caused by commit abc1234"
+
+
+**5. Apply Your Stashed Changes (If Needed)**
+If you stashed changes earlier and want to bring them back into your working directory, use:
+
+
+git stash pop
+This will apply the changes you had stashed before. If there are any conflicts, Git will notify you, and you'll need to resolve them.
+
+**6. Tag the Repository to Mark the Release**
+Once everything is fixed and you're happy with the state of the repository, you can create a new tag to mark the release of a new version. Tags are typically used to mark significant points in history, like releases.
+
+To create a lightweight tag (not attached to a specific commit message):
+
+
+git tag v1.0.0
+Or, if you'd like to add a message to the tag:
+
+
+git tag -a v1.0.0 -m "Release version 1.0.0"
+This will create a tag with the version number v1.0.0 to mark the current commit.
+
+**7. Push the Reverted Commit and the Tag to Remote Repository**
+Now, you need to push the changes (revert and fixes) along with the tag to the remote repository.
+
+To push the changes to the development branch:
+
+
+git push origin development
+To push the new tag to the remote repository:
+
+git push origin v1.0.0
+If you stashed changes earlier and want to bring them back into your working directory, use:
+
+
+git stash pop
+This will apply the changes you had stashed before. If there are any conflicts, Git will notify you, and you'll need to resolve them.
+
+
+
+
