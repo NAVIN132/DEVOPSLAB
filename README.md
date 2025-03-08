@@ -1,5 +1,9 @@
 # DEVOPSLAB
-Create the New Repository for Lab Assignment
+
+**Create the New Repository for Lab Assignment**
+
+****Assignement 1 ****
+
 **1. Go to the Physical Path and Set the Current Working Directory**
 Navigate to C:\KCSWorks\DevOps:
 
