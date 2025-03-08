@@ -154,6 +154,53 @@ If you stashed changes earlier and want to bring them back into your working dir
 git stash pop
 This will apply the changes you had stashed before. If there are any conflicts, Git will notify you, and you'll need to resolve them.
 
+******Assignment 3******
 
+**1. Source already Pushed on after commit of First Assignemnt on git Hub.**
+
+       git push -u origin feature1
+       
+**2. Go to GitHub and Create a Pull Request**
+   
+Once the feature branch is pushed to GitHub, follow these steps to create the pull request (PR):
+
+Open the GitHub repository in your browser where the repository is hosted.
+
+Navigate to the "Pull requests" tab at the top of the repository page.
+
+Click the "New pull request" button.
+
+Select the base and compare branches:
+
+For the base branch, choose main (this is the branch you're merging into).
+For the compare branch, select feature1 (or the name of your feature branch).
+Review the changes:
+
+GitHub will show you the changes between the main and feature1 branches. Make sure everything looks correct.
+You can also add a description of the changes you've made in the PR text box (for example, explaining the feature you worked on or any other context the reviewer might need).
+Create the pull request:
+
+After reviewing, click the Create pull request button.
+You can add a title and description for your PR. It's a good practice to add a meaningful description about what the PR is doing (e.g., "Add new feature to handle user authentication").
+**3. Merge the Pull Request**
+Once your PR is created, you may need someone to review the changes (depending on the repository's settings). After the review, you'll either:
+
+Merge it yourself (if you have the necessary permissions), or
+Wait for a project maintainer to review and merge the PR.
+To merge the PR:
+
+Click the "Merge pull request" button on GitHub.
+Confirm the merge (you may be prompted to confirm the merge, depending on settings).
+If necessary, delete the feature branch after merging (GitHub will typically give you an option to delete the branch).
+
+**4. Pull the Latest Changes into Your Local Repository (Optional)**
+After merging the pull request on GitHub, you can update your local main branch to reflect the changes from the remote repository.
+
+Switch to your main branch:
+
+git checkout main
+Pull the latest changes from GitHub:
+
+git pull origin main
 
 
